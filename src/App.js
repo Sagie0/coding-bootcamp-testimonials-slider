@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+// import React from 'react'
+import React, { useState } from 'react'
+import './App.css'
+import Testimonial from './Testimonial'
+import testimonialList from './data'
 
-function App() {
+
+const App = () => {
+
+  const [testimonial]= useState(testimonialList)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='body'>
+      <Testimonial testimonial={testimonial}/>
+      
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
